@@ -8,7 +8,7 @@ class HomeController extends Controller
     public function index()
     {
         $viewData = [];
-        $viewData["title"] = "Home Page - Online Store";
+        $viewData["title"] = "Home Page - terrah";
         return view('home.index')->with("viewData", $viewData);
     }
     public function about()
