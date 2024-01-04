@@ -1,6 +1,6 @@
 <?php
 namespace App\Http\Controllers;
-
+use App\Models\Terrain;
 use Illuminate\Http\Request;
 
 class TerrainController extends Controller
@@ -9,7 +9,6 @@ class TerrainController extends Controller
     {
         $viewData = [];
         $viewData["title"] = "Products - Online Store";
-        $viewData["subtitle"] = "List of products";
         $viewData["terrains"] = Terrain::all();
         return view('terrain.index')->with("viewData", $viewData);
     }
@@ -18,9 +17,8 @@ class TerrainController extends Controller
         $viewData = [];
         $product = Terrain::findOrFail($id);
         $viewData["title"] = $product->getName()." - Online Store";
-        $viewData["subtitle"] = $product->getName()." - Product information";
-        $viewData["product"] = $product;
-        return view('terrain.show')->with("viewData", $viewData);
+        $viewData["terrain"] = $product;
+        return view('terrain.show', compact('viewData'));
     }
 
 

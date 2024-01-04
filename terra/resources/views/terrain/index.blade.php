@@ -33,16 +33,16 @@
             @foreach ($viewData["terrains"] as $terrain)
             <div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 adv">
                 <div class="item">
-                    <a href="property-details.html"><img src="{{ asset('/storage/'.$terrain->getImage()) }}" alt=""></a>
-                    <span class="category">$terrain->getName()</span>
-                    <h6>$terrain->getPrice()</h6>
-                    <h4><a href="property-details.html">$terrain->getDescription()</a></h4>
+                    <a href="{{ route('terrain.show', ['id'=> $terrain->getId()]) }}"><img  class="img-fluid"  src="{{ asset('/storage/'.$terrain->getImage()) }}" alt=""></a>
+                    <span class="category"> {{ $terrain->getName() }}</span>
+                    <h6>{{ $terrain->getPrice() }}</h6>
+                    <!--<h4><a href="property-details.html">$terrain->getDescription()</a></h4>-->
                     <ul>
-                        <li>Emplacement: <span>$terrain->getLocation()</span></li>
-                        <li>Bathrooms: <span>8</span></li>
-                        <li>Taille: <span>$terrain->getSize()</span></li>
-                        <li>Floor: <span>3</span></li>
-                        <li>Parking: <span>6 spots</span></li>
+                        <li>Emplacement: <span>{{ $terrain->getLocation() }}</span></li>
+                        <!--<li>Score: <span>{{ $terrain->getScore() }}</span></li>-->
+                        <li>Taille: <span>{{ $terrain->getSize() }}</span></li>
+                        <li>En vente depuis le: <span>{{ $terrain->getCreatedAt() }}</span></li>
+                       
                     </ul>
                     <div class="main-button">
                         <a href="property-details.html">Schedule a visit</a>

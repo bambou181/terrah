@@ -7,7 +7,21 @@ use Illuminate\Database\Eloquent\Model;
 
 class Terrain extends Model
 {
-    use HasFactory;
+
+    //use HasFactory;
+    public static function validate($request)
+    {
+        $request->validate([
+            "name" => "required|max:255",
+            "location" => "required|max:255",
+            "size" => "required",
+            "description" => "required",
+            "price" => "required|numeric|gt:0",
+            'image' => 'image',
+            'imgs.*' => 'image',// Validation for each image in the array
+            ]);
+    }
+
     public function getId()
     {
     return $this->attributes['id'];
@@ -106,6 +120,17 @@ class Terrain extends Model
     {
         $this->attributes['updated_at'] = $updatedAt;
     }
-    
+
+    public function setImgsAttribute($value)
+    {
+        $this->attributes['imgs'] = json_encode($value);
+    }
+
+    // Getter
+    public function getImgsAttribute($value)
+    {
+        return json_decode($value, true);
+    }
+
 
 }

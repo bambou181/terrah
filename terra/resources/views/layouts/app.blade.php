@@ -9,6 +9,7 @@
     <link href="{{ asset('/css/bootstrap.min.css') }}" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="{{ asset('/css/style.css') }}" rel="stylesheet" />
+    <link href="{{ asset('/css/fancybox.css') }}" rel="stylesheet" />
     <link href="{{ asset('/css/owl.css') }}" rel="stylesheet" />
 
     <title>@yield('title', 'Online Store')</title>
@@ -62,11 +63,23 @@
                         <!-- ***** Logo End ***** -->
                         <!-- ***** Menu Start ***** -->
                         <ul class="nav">
-                            <li><a href="{{route('home.index') }}" class="active">Home</a></li>
-                            <li><a href="{{ route('property.index') }}">Properties</a></li>
-                            <li><a href="{{ route('detail.index') }}">Property Details</a></li>
+                            <li><a href="{{route('home.index') }}" class="">Home</a></li>
+                            <li><a href="{{ route('terrain.index') }}">Properties</a></li>
                             <li><a href="{{ route('contact.index') }}">Contact Us</a></li>
+                            @guest
+                            <li><a class="nav-link active" href="{{ route('login') }}">Login</a></li>
+                            <li><a class="nav-link active" href="{{ route('register') }}">Register</a></li>
+                            @else
+                            <form id="logout" action="{{ route('logout') }}" method="POST">
+                            <li><a role="button" class="nav-link active"
+                            onclick="document.getElementById('logout').submit();">Logout</a></li>
+                            @csrf
+                            </form>
+                            @endguest
                             <li><a href="#"><i class="bi bi-calendar"></i> Schedule a visit</a></li>
+                            
+
+
                         </ul>
                         <a class='menu-trigger'>
                             <span>Menu</span>
@@ -172,6 +185,7 @@
     <script src="{{ asset('/js/owl-carousel.js') }}"></script>
     <script src="{{ asset('/js/counter.js') }}"></script>
     <script src="{{ asset('/js/custom.js') }}"></script>
+    <script src="{{ asset('/js/fancybox.umd.js') }}"></script>
     
    
 </body>

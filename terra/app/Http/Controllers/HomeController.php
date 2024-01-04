@@ -1,6 +1,6 @@
 <?php
 namespace App\Http\Controllers;
-
+use App\Models\Terrain;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -9,6 +9,7 @@ class HomeController extends Controller
     {
         $viewData = [];
         $viewData["title"] = "Home Page - terrah";
+        $viewData["terrains"] = Terrain::all();
         return view('home.index')->with("viewData", $viewData);
     }
     public function about()
