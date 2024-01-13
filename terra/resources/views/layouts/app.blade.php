@@ -10,7 +10,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="{{ asset('/css/style.css') }}" rel="stylesheet" />
     <link href="{{ asset('/css/fancybox.css') }}" rel="stylesheet" />
+    <link
+          rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/carousel/carousel.thumbs.css"
+          />
     <link href="{{ asset('/css/owl.css') }}" rel="stylesheet" />
+    
 
     <title>@yield('title', 'Online Store')</title>
 </head>
@@ -63,9 +68,10 @@
                         <!-- ***** Logo End ***** -->
                         <!-- ***** Menu Start ***** -->
                         <ul class="nav">
-                            <li><a href="{{route('home.index') }}" class="">Home</a></li>
-                            <li><a href="{{ route('terrain.index') }}">Properties</a></li>
-                            <li><a href="{{ route('contact.index') }}">Contact Us</a></li>
+                            <li><a href="{{route('home.index') }}" class="nav-link active">Home</a></li>
+                            <li><a href="{{ route('terrain.index') }}" class="nav-link active">Properties</a></li>
+                            <li><a class="nav-link active" href="{{ route('cart.index') }}">Cart</a></li>
+                            <li><a href="{{ route('contact.index') }}" class="nav-link">Contact Us</a></li>
                             @guest
                             <li><a class="nav-link active" href="{{ route('login') }}">Login</a></li>
                             <li><a class="nav-link active" href="{{ route('register') }}">Register</a></li>
@@ -76,7 +82,6 @@
                             @csrf
                             </form>
                             @endguest
-                            <li><a href="#"><i class="bi bi-calendar"></i> Schedule a visit</a></li>
                             
 
 
@@ -185,7 +190,6 @@
     <script src="{{ asset('/js/owl-carousel.js') }}"></script>
     <script src="{{ asset('/js/counter.js') }}"></script>
     <script src="{{ asset('/js/custom.js') }}"></script>
-    <script src="{{ asset('/js/fancybox.umd.js') }}"></script>
     
    
 </body>

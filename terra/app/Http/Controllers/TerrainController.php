@@ -18,7 +18,10 @@ class TerrainController extends Controller
         $product = Terrain::findOrFail($id);
         $viewData["title"] = $product->getName()." - Online Store";
         $viewData["terrain"] = $product;
-        return view('terrain.show', compact('viewData'));
+        // Convert the JSON string to an array
+        $viewData["terrain"]->imgs = json_decode($viewData["terrain"]->imgs, true);
+        return view('terrain.show')->with('viewData', $viewData);
+
     }
 
 

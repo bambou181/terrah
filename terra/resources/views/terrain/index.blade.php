@@ -27,7 +27,7 @@
             </li>
             <li>
                 <a href="#!" data-filter=".rac">Penthouse</a>
-            </li>
+            </li>""
         </ul>
         <div class="row properties-box">
             @foreach ($viewData["terrains"] as $terrain)

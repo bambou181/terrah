@@ -1,6 +1,7 @@
 @extends('layouts.app')
 @section('title', $viewData["title"])
 @section('content')
+
 <div class="page-heading header-text">
     <div class="container">
         <div class="row">
@@ -12,57 +13,124 @@
     </div>
 </div>
 
+
 <div class="single-property section">
     <div class="container">
+        <nav class="navbar sticky-top navbar-light bg-danger mt-5">
+            <div class="container">
+                <a class="navbar-brand" href="#">{{ $viewData["terrain"]->getPrice() }} FCFA</a>
+            </div>
+        </nav><br>
         <div class="row">
-            <div class="col-lg-8">
-                <div class="main-image">
-                    <img src="{{ asset('/storage/'.$viewData["terrain"]->getImage()) }}" alt="">
+            <div class="col-lg-7">
+                <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+
+                    <div class="carousel-inner">
+                        <div class="carousel-item main-image active">
+                            <img src="{{ asset('/storage/'.$viewData["terrain"]->getImage()) }}" class="d-block "
+                                alt="...">
+                        </div>
+                        @foreach($viewData["terrain"]->imgs as $img)
+                        <div class="carousel-item main-image">
+                            <img src="{{ asset('/storage/'.$img) }}" class="d-block" alt="...">
+                        </div>
+                        @endforeach
+
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
                 </div>
+
+
                 <div class="main-content">
                     <span class="category">{{ $viewData["terrain"]->getName() }} </span>
+                    
                     <h4>{{ $viewData["terrain"]->getLocation() }} </h4>
                     <p>{{ $viewData["terrain"]->getDescription() }} .</p><br><br>
                 </div>
-              
+
             </div>
-            <div class="col-lg-4">
-                <div class="info-table">
+            <div class="col-lg-5">
+
+                <div class="info-table ">
+                    <button type="button" class="btn btn-info btn-lg w-100">Contacter notre équipe</button><br><br>
                     <ul>
                         <li>
                             <img src="{{ asset('img/info-icon-01.png') }}" alt="" style="max-width: 52px;">
                             <h4>{{ $viewData["terrain"]->getSize() }}<br><span>Taille</span></h4>
                         </li>
                         <li>
-                            <img src="{{ asset('img/info-icon-02.png') }}" alt="" style="max-width: 52px;">
-                            <h4>Contrat<br><span>Contrat Prêt</span></h4>
+                            <form action="">
+                                <div class="input-group mb-3">
+                                    <span class="input-group-text" id="basic-addon1"><i
+                                            class="bi bi-person-fill"></i></span>
+                                    <input type="text" class="form-control" placeholder="Username" aria-label="Username"
+                                        aria-describedby="basic-addon1">
+                                </div>
+                                <div class="input-group mb-3">
+                                    <span class="input-group-text" id="basic-addon1"><i
+                                            class="bi bi-envelope-fill"></i></span>
+                                    <input type="text" class="form-control" placeholder="Username" aria-label="Username"
+                                        aria-describedby="basic-addon1">
+                                </div>
+                                <div class="input-group mb-3">
+                                    <span class="input-group-text" id="basic-addon1"><i
+                                            class="bi bi-telephone-fill"></i></span>
+                                    <input type="text" class="form-control" placeholder="Username" aria-label="Username"
+                                        aria-describedby="basic-addon1">
+                                </div>
+                                <div class="input-group input-group-sm mb-3">
+                                    <span class="input-group-text " id="basic-addon1"><i
+                                            class="bi bi-calendar rond"></i></span>
+                                    <input type="date" class="form-control" placeholder="Username" aria-label="Username"
+                                        aria-describedby="basic-addon1" name="visitDate">
+                                </div>
+                                <div class="mb-3">
+                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"
+                                        checked>
+                                    <label class="form-check-label" for="flexCheckDefault">
+                                        J'aimerais être contacté(e) par des agences immobilières partenaires pour des
+                                        biens similaires
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                                    <label class="form-check-label" for="flexCheckChecked">
+                                        Je ne souhaite pas recevoir les annonces similaires et les suggestions
+                                        personnalisées
+                                    </label>
+                                </div><br>
+                                <button type="button" class="btn btn-danger w-100">Envoyer</button>
+                            </form>
                         </li>
-                        <li>
-                            <img src="{{ asset('img/info-icon-03.png') }}" alt="" style="max-width: 52px;">
-                            <h4>Paiement<br><span>Type de paiement</span></h4>
-                        </li>
-                        <li>
-                            <img src="{{ asset('img/info-icon-04.png') }}" alt="" style="max-width: 52px;">
-                            <h4>Sûreté<br><span>24/7 Sous Contrôle</span></h4>
-                        </li>
+
                     </ul>
                 </div>
             </div>
         </div>
     </div>
 </div>
-<div class="container">
-    <div class="row">
-      @foreach($viewData["terrain"]->imgs as $img)
-        <div class="col-lg-4 mb-3">
-            <a href="{{ asset('/storage/'.$img) }}" data-fancybox="gallery" data-caption="Caption #1">
-                <img src="{{ asset('/storage/'.$img) }}" alt=""/>  
-            </a>
 
-        </div>
-      @endforeach
-    </div>
-</div>
+
+
+
+<script src="{{ asset('/js/fancybox.umd.js') }}"></script>
+<script>
+Fancybox.bind('[data-fancybox="gallery"]', {
+    // Your custom options for a specific gallery
+});
+</script>
 <!--
 <div class="section best-deal">
     <div class="container">
@@ -193,4 +261,5 @@
         </div>
     </div>
 </div>-->
+
 @endsection
