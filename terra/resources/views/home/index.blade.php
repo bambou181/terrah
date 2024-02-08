@@ -1,40 +1,60 @@
 @extends('layouts.app')
-@section('title',$viewData["title"])
+@section('title',$donnees["title"])
 @section('content')
 
 <div class="main-banner">
     <div class="owl-carousel owl-banner">
         <div class="item item-1">
-            <div class="header-text">
-                <span class="category">Toronto, <em>Canada</em></span>
-                <h2>Hurry!<br>Get the Best Villa for you</h2>
-            </div>
-            <div class="container">
+            <div class="header-text" style="padding: 0 21% 0 21%">
+                <span class="category">Abidjan, <em>Côte d'Ivoire</em></span>
 
-                <div class="container mt-4">
-                    <div class="container container-form">
-                        <div class="row ">
-                            <div class=" col-12 col-lg-5 mb-4  ">
-                                <form action="index.html">
-                                    <input type="text" class="form-control form-control-lg border-0"
-                                        placeholder="Aire" />
-                                </form>
-                            </div>
-                            <div class="col-12 col-lg-5 mb-4">
-                                <form action="index.html">
-                                    <input type="text" class="form-control form-control-lg border-0"
-                                        placeholder="Lieu" />
-                                </form>
-                            </div>
-                            <div class="col-2">
-                                <button class="btn btn-primary btn-lg">
-                                    search <i data-feather="search"></i>
-                                </button>
+            </div>
+            <div class="container fieldsearch py-4">
+                <p class="px-4 pt-4 fs-4 fw-bold">Que cherchez-vous ?</p>
+                <form action="{{ route('home.search') }}" method="post">
+                    @csrf
+                    <div class="row p-4">
+                        <div class="col-12 mb-3">
+                            <label for="" class="fw-bold fs-6">LOCALITÉS</label><br>
+                            <input class="form-control" id="search" type="text" name="localite" 
+                                placeholder="Quartier, ville, code postal, département">
+
+                        </div>
+                        <div class=" col-xs-12 col-sm-12 col-md-4 col-lg-4 col-12 mb-3">
+                            <label for="">TYPE DE BIENS</label><br>
+                            <select class="form-select " name="type">
+                                <option value="terrain" selected>Terrains...</option>
+                                <option value="1">Appartements</option>
+                                <option value="2">Villa</option>
+                                <option value="3">Three</option>
+                            </select>
+
+                        </div>
+                        <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 col-12 mb-3">
+                            <label for="">SURFACE</label><br>
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="min" name="surface">
+                                <span class="input-group-text">m2</span>
                             </div>
                         </div>
+                        <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 col-12 mb-3">
+                            <label for="budget">BUDGET</label><br>
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="max" name="budget">
+                                <span class="input-group-text">F CFA</span>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2 col-12 mb-3">
+                            <br>
+                            <button type="submit" class="btn btn-danger">Rechercher</button>
+                        </div>
+
                     </div>
-                </div>
+                </form>
+
+
             </div>
+
 
         </div>
         <div class="item item-2">
@@ -127,7 +147,7 @@
                     <ul>
                         <li>
                             <img src="{{ asset('/img/info-icon-01.png') }}" alt="" style="max-width: 52px;">
-                            <h4>250 m2<br><span>Choix du terrain</span></h4>
+                            <h4>Taille<br><span>Choix du terrain</span></h4>
                         </li>
                         <li>
                             <img src="{{ asset('/img/info-icon-01.png') }}" alt="" style="max-width: 52px;">
@@ -142,10 +162,7 @@
                             <img src="{{ asset('/img/info-icon-03.png') }}" alt="" style="max-width: 52px;">
                             <h4>Paiement<br><span> Traitement de paiement selon l'option choisi</span></h4>
                         </li>
-                        <li>
-                            <img src="{{ asset('/img/info-icon-01.png') }}" alt="" style="max-width: 52px;">
-                            <h4>Safety<br><span>24/7</span></h4>
-                        </li>
+
                     </ul>
                 </div>
             </div>
@@ -158,8 +175,8 @@
         <div class="row">
             <div class="col-lg-4 offset-lg-4">
                 <div class="section-heading text-center">
-                    <h6>| Video View</h6>
-                    <h2>Get Closer View & Different Feeling</h2>
+                    <h6>Nous Vous Accompagnons</h6>
+                    <h2>De l'Achat du Terrain A la Construction</h2>
                 </div>
             </div>
         </div>
@@ -171,8 +188,8 @@
         <div class="row">
             <div class="col-lg-10 offset-lg-1">
                 <div class="video-frame">
-                    <img src="{{ asset('/img/video-frame.jpg') }}" alt="">
-                    <a href="https://youtube.com" target="_blank"><i class="bi bi-play"></i></a>
+                    <video src="{{ asset('/video/visite.mp4') }}" autoplay muted loop></video>
+                    <a href="" target="_blank"><i class="bi bi-play"></i></a>
                 </div>
             </div>
         </div>
@@ -215,7 +232,7 @@
         <div class="row">
             <div class="col-lg-4">
                 <div class="section-heading">
-                    <h6>| Meilleur Deal</h6>
+                    <h6>| Meilleur Deal - Soyez le Premier</h6>
                     <h2>Deviens propriétaire MAINTENANT!</h2>
                 </div>
             </div>
@@ -227,17 +244,17 @@
                                 <li class="nav-item" role="presentation">
                                     <button class="nav-link active" id="appartment-tab" data-bs-toggle="tab"
                                         data-bs-target="#appartment" type="button" role="tab" aria-controls="appartment"
-                                        aria-selected="true">Appartment</button>
+                                        aria-selected="true">Terrain</button>
                                 </li>
                                 <li class="nav-item" role="presentation">
                                     <button class="nav-link" id="villa-tab" data-bs-toggle="tab" data-bs-target="#villa"
                                         type="button" role="tab" aria-controls="villa" aria-selected="false">Villa
-                                        House</button>
+                                        Appartement</button>
                                 </li>
                                 <li class="nav-item" role="presentation">
                                     <button class="nav-link" id="penthouse-tab" data-bs-toggle="tab"
                                         data-bs-target="#penthouse" type="button" role="tab" aria-controls="penthouse"
-                                        aria-selected="false">Penthouse</button>
+                                        aria-selected="false">Villa</button>
                                 </li>
                             </ul>
                         </div>
@@ -348,127 +365,28 @@
     </div>
 </div>
 
-<div class="properties section">
+<div class="mt-4">
     <div class="container">
         <div class="row">
             <div class="col-lg-4 offset-lg-4">
                 <div class="section-heading text-center">
-                    <h6>| Properties</h6>
-                    <h2>We Provide The Best Property You Like</h2>
+                    <h6>| Retrouver nos annonces par</h6>
                 </div>
             </div>
         </div>
         <div class="row">
-            @foreach ($viewData["terrains"] as $terrain)
-                <div class="col-lg-4 col-md-6">
-                    <div class="item">
-                        <a href="{{ route('terrain.show', ['id'=> $terrain->getId()]) }}"><img src="{{ asset('/storage/'.$terrain->getImage()) }}" alt=""></a>
-                        <span class="category">{{ $terrain->getName() }}</span>
-                        <h6>{{ $terrain->getPrice() }}</h6>
-                        <h4><a href="property-details.html">{{ $terrain->getDescription() }}</a></h4>
-                        <ul>
-                            <li>Emplacement: <span>{{ $terrain->getLocation() }}</span></li>
-                            <!--<li>Score: <span>{{ $terrain->getScore() }}</span></li>-->
-                            <li>Taille: <span>{{ $terrain->getSize() }}</span></li>
-                            <li>En vente depuis le: <span>{{ $terrain->getCreatedAt() }}</span></li>
+            <div class="col-lg-4">
+                <h6>LOCALITÉS</h6>
+                <img src="{{ asset('/img/space5.jpg') }}" style="border-radius:10px; height:200px; max-width:100%;" alt="">
+            </div>
+            <div class="col-lg-4"></div>
+            <div class="col-lg-4">
+                <h6>TYPE DE BIENS</h6>
+                <img src="{{ asset('/img/video-bg.jpg') }}" style="border-radius:10px; height:200px; max-width:100%;" alt="">
+            </div>
+            <div class="col-lg-6">
 
-                        </ul>
-                        <div class="main-button">
-                            <a href="property-details.html">Schedule a visit</a>
-                        </div>
-                    </div>
-                </div>
-            @endforeach
-        <!--<div class="col-lg-4 col-md-6">
-          <div class="item">
-            <a href="property-details.html"><img src="{{ asset('/img/property-02.jpg') }}" alt=""></a>
-            <span class="category">Luxury Villa</span>
-            <h6>$1.180.000</h6>
-            <h4><a href="property-details.html">54 Mid Street Florida, OR 27001</a></h4>
-            <ul>
-              <li>Bedrooms: <span>6</span></li>
-              <li>Bathrooms: <span>5</span></li>
-              <li>Area: <span>450m2</span></li>
-              <li>Floor: <span>3</span></li>
-              <li>Parking: <span>8 spots</span></li>
-            </ul>
-            <div class="main-button">
-              <a href="property-details.html">Schedule a visit</a>
             </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6">
-          <div class="item">
-            <a href="property-details.html"><img src="{{ asset('/img/property-03.jpg') }}" alt=""></a>
-            <span class="category">Luxury Villa</span>
-            <h6>$1.460.000</h6>
-            <h4><a href="property-details.html">26 Old Street Miami, OR 38540</a></h4>
-            <ul>
-              <li>Bedrooms: <span>5</span></li>
-              <li>Bathrooms: <span>4</span></li>
-              <li>Area: <span>225m2</span></li>
-              <li>Floor: <span>3</span></li>
-              <li>Parking: <span>10 spots</span></li>
-            </ul>
-            <div class="main-button">
-              <a href="property-details.html">Schedule a visit</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6">
-          <div class="item">
-            <a href="property-details.html"><img src="{{ asset('/img/property-04.jpg') }}" alt=""></a>
-            <span class="category">Apartment</span>
-            <h6>$584.500</h6>
-            <h4><a href="property-details.html">12 New Street Miami, OR 12650</a></h4>
-            <ul>
-              <li>Bedrooms: <span>4</span></li>
-              <li>Bathrooms: <span>3</span></li>
-              <li>Area: <span>125m2</span></li>
-              <li>Floor: <span>25th</span></li>
-              <li>Parking: <span>2 cars</span></li>
-            </ul>
-            <div class="main-button">
-              <a href="property-details.html">Schedule a visit</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6">
-          <div class="item">
-            <a href="property-details.html"><img src="{{ asset('/img/property-05.jpg') }}" alt=""></a>
-            <span class="category">Penthouse</span>
-            <h6>$925.600</h6>
-            <h4><a href="property-details.html">34 Beach Street Miami, OR 42680</a></h4>
-            <ul>
-              <li>Bedrooms: <span>4</span></li>
-              <li>Bathrooms: <span>4</span></li>
-              <li>Area: <span>180m2</span></li>
-              <li>Floor: <span>38th</span></li>
-              <li>Parking: <span>2 cars</span></li>
-            </ul>
-            <div class="main-button">
-              <a href="property-details.html">Schedule a visit</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6">
-          <div class="item">
-            <a href="property-details.html"><img src="{{ asset('/img/property-06.jpg') }}" alt=""></a>
-            <span class="category">Modern Condo</span>
-            <h6>$450.000</h6>
-            <h4><a href="property-details.html">22 New Street Portland, OR 16540</a></h4>
-            <ul>
-              <li>Bedrooms: <span>3</span></li>
-              <li>Bathrooms: <span>2</span></li>
-              <li>Area: <span>165m2</span></li>
-              <li>Floor: <span>26th</span></li>
-              <li>Parking: <span>3 cars</span></li>
-            </ul>
-            <div class="main-button">
-              <a href="property-details.html">Schedule a visit</a>
-            </div>
-          </div>
-        </div>-->
         </div>
     </div>
 </div>
@@ -478,8 +396,8 @@
         <div class="row">
             <div class="col-lg-4 offset-lg-4">
                 <div class="section-heading text-center">
-                    <h6>| Contact Us</h6>
-                    <h2>Get In Touch With Our Agents</h2>
+                    <h6>| Nous Contacter</h6>
+                    <h2>Pour plus d'informations</h2>
                 </div>
             </div>
         </div>
@@ -531,6 +449,7 @@
         </div>
     </div>
 </div>
+
 
 
 @endsection

@@ -22,7 +22,7 @@ return view('cart.index')->with("viewData", $viewData);
 public function add(Request $request, $id)
     {
         $terrains = $request->session()->get("terrains", []);
-        $terrains[$id] = $request->input('visitDate'); // Assuming quantity is always 1 for each product
+        $terrains[$id] = 1; // Assuming quantity is always 1 for each product
         $request->session()->put('terrains', $terrains);
 
         return redirect()->route('cart.index');

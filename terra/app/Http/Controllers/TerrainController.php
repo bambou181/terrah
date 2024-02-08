@@ -7,10 +7,9 @@ class TerrainController extends Controller
 {
     public function index()
     {
-        $viewData = [];
-        $viewData["title"] = "Products - Online Store";
-        $viewData["terrains"] = Terrain::all();
-        return view('terrain.index')->with("viewData", $viewData);
+       
+        $allTerrains = Terrain::all();
+        return view('terrain.index', compact('allTerrains'));
     }
     public function show($id)
     {
@@ -24,6 +23,7 @@ class TerrainController extends Controller
 
     }
 
+    
 
     
 }

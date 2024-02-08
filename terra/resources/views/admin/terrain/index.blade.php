@@ -41,12 +41,13 @@
                         </div>
                     </div>
                 </div>
+               
 
                 <div class="col-6">
                     <div class="mb-3 row">
                         <label class="col-lg-3 col-md-6 col-sm-12 col-form-label">Emplacement:</label>
                         <div class="col-lg-9 col-md-6 col-sm-12">
-                            <input name="location" value="{{ old('location') }}" type="text" class="form-control">
+                            <input name="location"  value="{{ old('location') }}" type="text" class="form-control typeahead" >
                         </div>
                     </div>
                 </div>

@@ -20,7 +20,7 @@ class User extends Authenticatable
     protected $fillable = [
         'name',
         'email',
-        'password',
+        'phone',
     ];
 
     /**
@@ -82,6 +82,15 @@ public function setRole($role)
 {
 $this->attributes['role'] = $role;
 }
+
+public function getPhone()
+{
+return $this->attributes['phone'];
+}
+public function setPhone($phone)
+{
+$this->attributes['phone'] = $phone;
+}
 public function getCreatedAt()
 {
 return $this->attributes['created_at'];
@@ -98,6 +107,17 @@ public function setUpdatedAt($updatedAt)
 {
 $this->attributes['updated_at'] = $updatedAt;
 }
+
+public function terrains()
+    {
+        return $this->belongsToMany(Terrain::class, 'visites', 'user_id', 'terrain_id')
+                    ->withPivot('visitDate');
+    }
+
+    public function visites()
+    {
+        return $this->hasMany(Visite::class);
+    }
 
 
 }

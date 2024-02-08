@@ -39,8 +39,8 @@
             <div class="row">
                 <div class="col-lg-8 col-md-8">
                     <ul class="info">
-                        <li><i class="bi bi-envelope"></i> info@company.com</li>
-                        <li><i class="bi bi-map"></i> Sunny Isles Beach, FL 33160</li>
+                        <li><i class="bi bi-envelope"></i> kouakoubadou74@gmail.com</li>
+                        <li><i class="bi bi-map"></i> Côte d'Ivoire,  CI</li>
                     </ul>
                 </div>
                 <div class="col-lg-4 col-md-4">
@@ -63,16 +63,18 @@
                     <nav class="main-nav">
                         <!-- ***** Logo Start ***** -->
                         <a href="{{route('home.index') }}" class="logo">
-                            <h1>Villa</h1>
+                            <h1>KRA</h1>
+                            
                         </a>
                         <!-- ***** Logo End ***** -->
                         <!-- ***** Menu Start ***** -->
+                        
                         <ul class="nav">
-                            <li><a href="{{route('home.index') }}" class="nav-link active">Home</a></li>
-                            <li><a href="{{ route('terrain.index') }}" class="nav-link active">Properties</a></li>
-                            <li><a class="nav-link active" href="{{ route('cart.index') }}">Cart</a></li>
-                            <li><a href="{{ route('contact.index') }}" class="nav-link">Contact Us</a></li>
-                            @guest
+                            <li class="nav-item"><a href="{{route('home.index') }}" class="nav-link active" >Accueil</a></li>
+                            <li class="nav-item"><a href="{{ route('terrain.index') }}" class="nav-link">Terrains</a></li>
+                            <li class="nav-item"><a class="nav-link" href="{{ route('cart.index') }}">A propos</a></li>
+                            <li class="nav-item"><a href="{{ route('contact.index') }}" class="nav-link">Nous Contacter </a></li>
+                           <!--  @guest
                             <li><a class="nav-link active" href="{{ route('login') }}">Login</a></li>
                             <li><a class="nav-link active" href="{{ route('register') }}">Register</a></li>
                             @else
@@ -82,7 +84,7 @@
                             @csrf
                             </form>
                             @endguest
-                            
+                            -->
 
 
                         </ul>
@@ -182,10 +184,30 @@
         </div>
     </footer>
     <!-- Footer Section End -->
-
-    
     <script src="{{ asset('/js/jquery.min.js') }}"></script>
     <script src="{{ asset('/js/bootstrap.bundle.min.js') }}"></script>
+    <script src="{{ asset('/js/bootstrap3-typeahead.min.js') }}"></script>
+    <script type="text/javascript">
+        var path = "{{ route('home.autocomplete') }}";
+        $('#search').typeahead({
+            
+                source: function (query, process) {
+
+                    return $.get(path, {
+
+                        term: query
+
+                    }, function (data) {
+
+                        return process(data);
+
+                    });
+
+                }
+
+            });
+</script>
+    
     <script src="{{ asset('/js/isotope.min.js') }}"></script>
     <script src="{{ asset('/js/owl-carousel.js') }}"></script>
     <script src="{{ asset('/js/counter.js') }}"></script>

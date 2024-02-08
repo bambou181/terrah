@@ -1,0 +1,1541 @@
+
+INSERT INTO locations (DEPARTEMENT, COMMUNE)
+VALUES 
+('ABIDJAN', 'Abobo'),
+('ABIDJAN', 'Adjamé'),
+('ABIDJAN', 'Attecoubé'),
+('ABIDJAN', 'Cocody'),
+('ABIDJAN', 'Koumassi'),
+('ABIDJAN', 'Marcory'),
+('ABIDJAN', 'Plateau'),
+('ABIDJAN', 'Port-Bouët'),
+('ABIDJAN', 'Treichville'),
+('ABIDJAN', 'Yopougon'),
+('ABIDJAN', 'Anyama'),
+('ABIDJAN', 'Bingerville'),
+('ABIDJAN', 'Songon'),
+('ALEPE', 'Alépé'),
+('ALEPE', 'Oghwyapo'),
+('DABOU', 'Dabou'),
+('DABOU', 'Sikensi'),
+('GRAND-LAHOU', 'Grand-Lahou'),
+('JACQUEVILLE', 'Jacqueville'),
+('TIASSALE', 'Tiassalé'),
+('TIASSALE', 'Taabo'),
+('BOUNDIALI', 'Dikodougou'),
+('BOUNDIALI', 'Guiembé'),
+('BOUNDIALI', 'Karakoro'),
+('BOUNDIALI', 'Korhogo'),
+('BOUNDIALI', 'Komborodougou'),
+('BOUNDIALI', 'M\'bengué'),
+('BOUNDIALI', 'Napiélédougou'),
+('BOUNDIALI', 'Niofoin'),
+('BOUNDIALI', 'Tioroniaradougou'),
+('BOUNDIALI', 'Sinematiali'),
+('BOUNDIALI', 'Sirasso'),
+('BOUNDIALI', 'Gbon'),
+('BOUNDIALI', 'Boundiali'),
+('BOUNDIALI', 'Kasséré'),
+('BOUNDIALI', 'Kolia'),
+('BOUNDIALI', 'Kouto'),
+('FERKESSEDOUGOU', 'Diawala'),
+('FERKESSEDOUGOU', 'Ferkessedougou'),
+('FERKESSEDOUGOU', 'Kong'),
+('FERKESSEDOUGOU', 'Koumbala'),
+('FERKESSEDOUGOU', 'Niellé'),
+('FERKESSEDOUGOU', 'Ouangolodougou'),
+('TENGRELA', 'Kanakono'),
+('TENGRELA', 'Tengréla'),
+('ABOISSO', 'Aboisso'),
+('ABOISSO', 'Ayamé'),
+('ABOISSO', 'Bianouan'),
+('ABOISSO', 'Maféré'),
+('ABOISSO', 'Tiapoum'),
+('ADIAKE', 'Adiaké'),
+('ADIAKE', 'Assinie-mafia'),
+('ADIAKE', 'Etuéboué'),
+('GRAND-BASSAM', 'Grand-Bassam'),
+('GRAND-BASSAM', 'Bonoua'),
+('DALOA', 'Bediala'),
+('DALOA', 'Daloa'),
+('DALOA', 'Gadouan'),
+('DALOA', 'Gboguhé'),
+('DALOA', 'Zaïbo'),
+('DALOA', 'Zoukougbeu'),
+('ISSIA', 'Boguedia'),
+('ISSIA', 'Iboguhe'),
+('ISSIA', 'Issia'),
+('ISSIA', 'Saïoua'),
+('VAVOUA', 'Dania'),
+('VAVOUA', 'Seitifla'),
+('VAVOUA', 'Vavoua'),
+('AGBOVILLE', 'Agboville'),
+('AGBOVILLE', 'Azaguié'),
+('AGBOVILLE', 'Cechi'),
+('AGBOVILLE', 'Grand morie'),
+('AGBOVILLE', 'Oress-krobou'),
+('AGBOVILLE', 'Rubino'),
+('ADZOPE', 'Adzopé'),
+('ADZOPE', 'Agou'),
+('ADZOPE', 'Afféry'),
+('ADZOPE', 'Becedi-brignan'),
+('ADZOPE', 'Akoupé'),
+('ADZOPE', 'Assikoi'),
+('ADZOPE', 'Yakassé-Attobrou'),
+('ABENGOUROU', 'Abengourou'),
+('ABENGOUROU', 'Bettié'),
+('ABENGOUROU', 'Niablé'),
+('AGNIBILEKROU', 'Agnibilékrou'),
+('BOUAKE', 'Diabo'),
+('BOUAKE', 'Djebonoua'),
+('BOUAKE', 'Brobo'),
+('BOUAKE', 'Botro'),
+('BOUAKE', 'Bouaké'),
+('BOUAKE', 'Languibonou'),
+('BEOUMI', 'Beoumi'),
+('BEOUMI', 'Bodokro'),
+('BEOUMI', 'Ando-kekrenou'),
+('BEOUMI', 'Kondrobo'),
+('DABAKALA', 'Bassawa'),
+('DABAKALA', 'Bonieredougou'),
+('DABAKALA', 'Dabakala'),
+('DABAKALA', 'Foumbolo'),
+('DABAKALA', 'Satama-Sokoro'),
+('DABAKALA', 'Satama-Sokouro'),
+('KATIOLA', 'Fronan'),
+('KATIOLA', 'Katiola'),
+('KATIOLA', 'Niakaramandougou'),
+('KATIOLA', 'Tafiré'),
+('KATIOLA', 'Tortiya'),
+('KATIOLA', 'Timbe'),
+('SAKASSOU', 'Sakassou'),
+('SAKASSOU', 'Tomoudi-sakassou'),
+('MAN', 'Man'),
+('MAN', 'Facobly'),
+('MAN', 'Kouibly'),
+('MAN', 'Logoualé'),
+('MAN', 'Sangouiné'),
+('MAN', 'Semien'),
+('MAN', 'Niadrou'),
+('MAN', 'Totrodrou'),
+('BANGOLO', 'Bangolo'),
+('BANGOLO', 'Dieouzon'),
+('BANGOLO', 'Zeo'),
+('BANGOLO', 'Zou'),
+('BIANKOUMA', 'Biankouma'),
+('BIANKOUMA', 'Gbonné'),
+('BIANKOUMA', 'Sipilou'),
+('DANANE', 'Danané'),
+('DANANE', 'Bin-Houyé'),
+('DANANE', 'Zouan-Hounien'),
+('DANANE', 'Mahapleu'),
+('DIVO', 'Divo'),
+('DIVO', 'Fresco'),
+('DIVO', 'Guitry'),
+('DIVO', 'Hiré'),
+('DIVO', 'YOCOBOUE'),
+('LAKOTA', 'Lakota'),
+('LAKOTA', 'NIAMBEZARIA'),
+('LAKOTA', 'Zikisso'),
+('GAGNOA', 'Bayota'),
+('GAGNOA', 'Gagnoa'),
+('GAGNOA', 'Gnagbodougnoa'),
+('GAGNOA', 'Guibéroua'),
+('GAGNOA', 'Ouragahio'),
+('OUME', 'Diégonéfla'),
+('OUME', 'Oumé'),
+('YAMOUSSOUKRO', 'Yamoussoukro'),
+('YAMOUSSOUKRO', 'Didiévi'),
+('YAMOUSSOUKRO', 'Attiegouakro'),
+('TIEBISSOU', 'Tiébissou'),
+('TIEBISSOU', 'Tié-N’diekro'),
+('TOUMODI', 'Toumodi'),
+('TOUMODI', 'Djékanou'),
+('TOUMODI', 'Angoda'),
+('TOUMODI', 'Kpouebo'),
+('TOUMODI', 'Kokoumbo'),
+('DUEKOUE', 'Duékoué'),
+('DUEKOUE', 'BAGOHOUO'),
+('DUEKOUE', 'GBAPLEU'),
+('DUEKOUE', 'GUEHIEBLY'),
+('DUEKOUE', 'GUEZON'),
+('GUIGLO', 'Bloléquin'),
+('GUIGLO', 'Guiglo'),
+('GUIGLO', 'Taï'),
+('TOULEPLEU', 'Toulepleu'),
+('TOULEPLEU', 'BAKOUBLY'),
+('TOULEPLEU', 'PEHE'),
+('TOULEPLEU', 'TIOBLY'),
+('BONDOUKOU', 'Bondoukou'),
+('BONDOUKOU', 'Goumere'),
+('BONDOUKOU', 'Tabagne'),
+('BONDOUKOU', 'Taoudi'),
+('BONDOUKOU', 'Sorobango'),
+('BONDOUKOU', 'Sapli'),
+('BONDOUKOU', 'Sandégué'),
+('BOUNA', 'Bouna'),
+('BOUNA', 'Doropo'),
+('BOUNA', 'Nassian'),
+('BOUNA', 'Tehini'),
+('TANDA', 'Tanda'),
+('TANDA', 'Assuefry'),
+('TANDA', 'Kouassi-datekro'),
+('TANDA', 'Transua'),
+('TANDA', 'Tankesse'),
+('TOUBA', 'Booko'),
+('TOUBA', 'Borotou'),
+('TOUBA', 'Guintéguéla'),
+('TOUBA', 'Koonan'),
+('TOUBA', 'Koro'),
+('TOUBA', 'Ouaninou'),
+('TOUBA', 'Touba'),
+('TOUBA', 'FOUNGBESSO'),
+('SAN-PEDRO', 'Grand-Béréby'),
+('SAN-PEDRO', 'San-Pédro'),
+('SASSANDRA', 'GUEYO'),
+('SASSANDRA', 'Sassandra'),
+('SASSANDRA', 'SAGO'),
+('SOUBRE', 'Buyo'),
+('SOUBRE', 'Grand-Zattry'),
+('SOUBRE', 'Méagui'),
+('SOUBRE', 'OKROUYO'),
+('SOUBRE', 'Soubré'),
+('TABOU', 'Grabo'),
+('TABOU', 'Tabou'),
+('DIMBOKRO', 'Dimbokro'),
+('BONGOUANOU', 'Anoumaba'),
+('BONGOUANOU', 'Arrah'),
+('BONGOUANOU', 'Bongouanou'),
+('BONGOUANOU', 'M\'batto'),
+('BONGOUANOU', 'Tiemelékro'),
+('BOCANDA', 'Bocanda'),
+('DAOUKRO', 'Daoukro'),
+('DAOUKRO', 'Ettrokro'),
+('DAOUKRO', 'Kouassi-Kouassikro'),
+('DAOUKRO', 'Ouellé'),
+('M\'BAHIAKRO', 'M\'bahiakro'),
+('M\'BAHIAKRO', 'Banguera'),
+('M\'BAHIAKRO', 'Koffi-amonkro'),
+('M\'BAHIAKRO', 'Prikro'),
+('BOUAFLE', 'Bonon'),
+('BOUAFLE', 'Bouaflé'),
+('SINFRA', 'Sinfra'),
+('SINFRA', 'Kouetinfla'),
+('SINFRA', 'Bazre'),
+('SINFRA', 'Konefla'),
+('ZUENOULA', 'Gohitafla'),
+('ZUENOULA', 'Zuénoula'),
+('MANKONO', 'Dianra'),
+('MANKONO', 'Kongasso'),
+('MANKONO', 'Kounahiri'),
+('MANKONO', 'Mankono'),
+('MANKONO', 'Marandallah'),
+('MANKONO', 'Sarhala'),
+('MANKONO', 'Tieningboue'),
+('SEGUELA', 'Djibrosso'),
+('SEGUELA', 'Dualla'),
+('SEGUELA', 'Kani'),
+('SEGUELA', 'Massala'),
+('SEGUELA', 'Morondo'),
+('SEGUELA', 'Seguela'),
+('SEGUELA', 'Sifié'),
+('SEGUELA', 'Worofla'),
+('ODIENNE', 'Bako'),
+('ODIENNE', 'Dioulatiédougou'),
+('ODIENNE', 'Gbeleban'),
+('ODIENNE', 'Goulia'),
+('ODIENNE', 'Kaniasso'),
+('ODIENNE', 'Madinani'),
+('ODIENNE', 'Minignan'),
+('ODIENNE', 'Odienné'),
+('ODIENNE', 'Samatiguila'),
+('ODIENNE', 'Séguélon'),
+('ODIENNE', 'Seydougou'),
+('ODIENNE', 'Tiémé'),
+('ODIENNE', 'Tienko');
+
+
+
+
+
+
+
+
+
+[
+    {
+     
+     "DEPARTEMENT": "ABIDJAN",
+     
+     "COMMUNE": "Abobo"
+    },
+    {
+     
+     "DEPARTEMENT": "ABIDJAN",
+     
+     "COMMUNE": "Adjamé"
+    },
+    {
+     
+     "DEPARTEMENT": "ABIDJAN",
+     
+     "COMMUNE": "Attecoubé"
+    },
+    {
+     
+     "DEPARTEMENT": "ABIDJAN",
+     
+     "COMMUNE": "Cocody"
+    },
+    {
+     
+     "DEPARTEMENT": "ABIDJAN",
+     
+     "COMMUNE": "Koumassi"
+    },
+    {
+     
+     "DEPARTEMENT": "ABIDJAN",
+     
+     "COMMUNE": "Marcory"
+    },
+    {
+     
+     "DEPARTEMENT": "ABIDJAN",
+     
+     "COMMUNE": "Plateau"
+    },
+    {
+     
+     "DEPARTEMENT": "ABIDJAN",
+     
+     "COMMUNE": "Port-Bouët"
+    },
+    {
+     
+     "DEPARTEMENT": "ABIDJAN",
+     
+     "COMMUNE": "Treichville"
+    },
+    {
+     
+     "DEPARTEMENT": "ABIDJAN",
+     
+     "COMMUNE": "Yopougon"
+    },
+    {
+     
+     "DEPARTEMENT": "ABIDJAN",
+
+     "COMMUNE": "Anyama"
+    },
+    {
+     
+     "DEPARTEMENT": "ABIDJAN",
+     
+     "COMMUNE": "Bingerville"
+    },
+    {
+     
+     "DEPARTEMENT": "ABIDJAN",
+
+     "COMMUNE": "Songon"
+    },
+    {
+     
+     "DEPARTEMENT": "ALEPE",
+     
+     "COMMUNE": "Alépé"
+    },
+    {
+     
+     "DEPARTEMENT": "ALEPE",
+     "COMMUNE": "Oghwyapo"
+    },
+    {
+     
+     "DEPARTEMENT": "DABOU",
+     "COMMUNE": "Dabou"
+    },
+    {
+     
+     "DEPARTEMENT": "DABOU",
+     "COMMUNE": "Sikensi"
+    },
+    {
+     
+     "DEPARTEMENT": "GRAND-LAHOU",
+     "COMMUNE": "Grand-Lahou"
+    },
+    {
+     
+     "DEPARTEMENT": "JACQUEVILLE",
+     "COMMUNE": "Jacqueville"
+    },
+    {
+     
+     "DEPARTEMENT": "TIASSALE",
+     "COMMUNE": "Tiassalé"
+    },
+    {
+     
+     "DEPARTEMENT": "TIASSALE",
+     "COMMUNE": "Taabo"
+    },
+    {
+     
+     "DEPARTEMENT": "BOUNDIALI",
+
+     "COMMUNE": "Dikodougou"
+    },
+    {
+     
+     "DEPARTEMENT": "BOUNDIALI",
+     "COMMUNE": "Guiembé"
+    },
+    {
+     
+     "DEPARTEMENT": "BOUNDIALI",
+     "COMMUNE": "Karakoro"
+    },
+    {
+     
+     "DEPARTEMENT": "BOUNDIALI",
+     "COMMUNE": "Korhogo"
+    },
+    {
+     
+     "DEPARTEMENT": "BOUNDIALI",
+     "COMMUNE": "Komborodougou"
+    },
+    {
+     
+     "DEPARTEMENT": "BOUNDIALI",
+     "COMMUNE": "M'bengué"
+    },
+    {
+     
+     "DEPARTEMENT": "BOUNDIALI",
+     "COMMUNE": "Napiélédougou"
+    },
+    {
+     
+     "DEPARTEMENT": "BOUNDIALI",
+     "COMMUNE": "Niofoin"
+    },
+    {
+     
+     "DEPARTEMENT": "BOUNDIALI",
+     "COMMUNE": "Tioroniaradougou"
+    },
+    {
+     
+     "DEPARTEMENT": "BOUNDIALI",
+     "COMMUNE": "Sinematiali"
+    },
+    {
+     
+     "DEPARTEMENT": "BOUNDIALI",
+     "COMMUNE": "Sirasso"
+    },
+    {
+     
+     "DEPARTEMENT": "BOUNDIALI",
+     "COMMUNE": "Gbon"
+    },
+    {
+     
+     "DEPARTEMENT": "BOUNDIALI",
+     "COMMUNE": "Boundiali"
+    },
+    {
+     
+     "DEPARTEMENT": "BOUNDIALI",
+     "COMMUNE": "Kasséré"
+    },
+    {
+     
+     "DEPARTEMENT": "BOUNDIALI",
+     "COMMUNE": "Kolia"
+    },
+    {
+     
+     "DEPARTEMENT": "BOUNDIALI",
+     "COMMUNE": "Kouto"
+    },
+    {
+     
+     "DEPARTEMENT": "FERKESSEDOUGOU",
+     "COMMUNE": "Diawala"
+    },
+    {
+     
+     "DEPARTEMENT": "FERKESSEDOUGOU",
+     "COMMUNE": "Ferkessedougou"
+    },
+    {
+     
+     "DEPARTEMENT": "FERKESSEDOUGOU",
+     "COMMUNE": "Kong"
+    },
+    {
+     
+     "DEPARTEMENT": "FERKESSEDOUGOU",
+     "COMMUNE": "Koumbala"
+    },
+    {
+     
+     "DEPARTEMENT": "FERKESSEDOUGOU",
+     "COMMUNE": "Niellé"
+    },
+    {
+     
+     "DEPARTEMENT": "FERKESSEDOUGOU",
+     "COMMUNE": "Ouangolodougou"
+    },
+    {
+     
+     "DEPARTEMENT": "TENGRELA",
+     "COMMUNE": "Kanakono"
+    },
+    {
+     
+     "DEPARTEMENT": "TENGRELA",
+     "COMMUNE": "Tengréla"
+    },
+    {
+     
+     "DEPARTEMENT": "ABOISSO",
+     "COMMUNE": "Aboisso"
+    },
+    {
+     
+     "DEPARTEMENT": "ABOISSO",
+     "COMMUNE": "Ayamé"
+    },
+    {
+     
+     "DEPARTEMENT": "ABOISSO",
+     "COMMUNE": "Bianouan"
+    },
+    {
+     
+     "DEPARTEMENT": "ABOISSO",
+     "COMMUNE": "Maféré"
+    },
+    {
+     
+     "DEPARTEMENT": "ABOISSO",
+     "COMMUNE": "Tiapoum"
+    },
+    {
+     
+     "DEPARTEMENT": "  ADIAKE",
+     "COMMUNE": "Adiaké"
+    },
+    {
+     
+     "DEPARTEMENT": "  ADIAKE",
+     "COMMUNE": "Assinie-mafia"
+    },
+    {
+     
+     "DEPARTEMENT": "  ADIAKE",
+     "COMMUNE": "Etuéboué"
+    },
+    {
+     
+     "DEPARTEMENT": "GRAND-BASSAM",
+     "COMMUNE": "Grand-Bassam"
+    },
+    {
+     
+     "DEPARTEMENT": "GRAND-BASSAM",
+     "COMMUNE": "Bonoua"
+    },
+    {
+     
+     "DEPARTEMENT": "DALOA",
+     "COMMUNE": "Bediala"
+    },
+    {
+     
+     "DEPARTEMENT": "DALOA",
+     "COMMUNE": "Daloa"
+    },
+    {
+     
+     "DEPARTEMENT": "DALOA",
+     "COMMUNE": "Gadouan"
+    },
+    {
+     
+     "DEPARTEMENT": "DALOA",
+     "COMMUNE": "Gboguhé"
+    },
+    {
+     
+     "DEPARTEMENT": "DALOA",
+     "COMMUNE": "Zaïbo"
+    },
+    {
+     
+     "DEPARTEMENT": "DALOA",
+     "COMMUNE": "Zoukougbeu"
+    },
+    {
+     
+     "DEPARTEMENT": "  ISSIA",
+     "COMMUNE": "Boguedia"
+    },
+    {
+     
+     "DEPARTEMENT": "  ISSIA",
+     "COMMUNE": "Iboguhe"
+    },
+    {
+     
+     "DEPARTEMENT": "  ISSIA",
+     "COMMUNE": "Issia"
+    },
+    {
+     
+     "DEPARTEMENT": "  ISSIA",
+     "COMMUNE": "Saïoua"
+    },
+    {
+     
+     "DEPARTEMENT": "  VAVOUA",
+     "COMMUNE": "Dania"
+    },
+    {
+     
+     "DEPARTEMENT": "  VAVOUA",
+     "COMMUNE": "Seitifla"
+    },
+    {
+     
+     "DEPARTEMENT": "  VAVOUA",
+     "COMMUNE": "Vavoua"
+    },
+    {
+     
+     "DEPARTEMENT": "AGBOVILLE",
+     "COMMUNE": "Agboville"
+    },
+    {
+     
+     "DEPARTEMENT": "AGBOVILLE",
+     "COMMUNE": "Azaguié"
+    },
+    {
+     
+     "DEPARTEMENT": "AGBOVILLE",
+     "COMMUNE": "Cechi"
+    },
+    {
+     
+     "DEPARTEMENT": "AGBOVILLE",
+     "COMMUNE": "Grand morie"
+    },
+    {
+     
+     "DEPARTEMENT": "AGBOVILLE",
+     "COMMUNE": "Oress-krobou"
+    },
+    {
+     
+     "DEPARTEMENT": "AGBOVILLE",
+     "COMMUNE": "Rubino"
+    },
+    {
+     
+     "DEPARTEMENT": "  ADZOPE",
+     "COMMUNE": "Adzopé"
+    },
+    {
+     
+     "DEPARTEMENT": "  ADZOPE",
+     "COMMUNE": "Agou"
+    },
+    {
+     
+     "DEPARTEMENT": "  ADZOPE",
+     "COMMUNE": "Afféry"
+    },
+    {
+     
+     "DEPARTEMENT": "  ADZOPE",
+     "COMMUNE": "Becedi-brignan"
+    },
+    {
+     
+     "DEPARTEMENT": "  ADZOPE",
+     "COMMUNE": "Akoupé"
+    },
+    {
+     
+     "DEPARTEMENT": "  ADZOPE",
+     "COMMUNE": "Assikoi"
+    },
+    {
+     
+     "DEPARTEMENT": "  ADZOPE",
+     "COMMUNE": "Yakassé-Attobrou"
+    },
+    {
+     
+     "DEPARTEMENT": "ABENGOUROU",
+     "COMMUNE": "Abengourou"
+    },
+    {
+     
+     "DEPARTEMENT": "ABENGOUROU",
+     "COMMUNE": "Bettié"
+    },
+    {
+     
+     "DEPARTEMENT": "ABENGOUROU",
+     "COMMUNE": "Niablé"
+    },
+    {
+     
+     "DEPARTEMENT": "AGNIBILEKROU",
+     "COMMUNE": "Agnibilékrou"
+    },
+    {
+     
+     "DEPARTEMENT": "BOUAKE",
+     "COMMUNE": "Diabo"
+    },
+    {
+     
+     "DEPARTEMENT": "BOUAKE",
+     "COMMUNE": "Djebonoua"
+    },
+    {
+     
+     "DEPARTEMENT": "BOUAKE",
+     "COMMUNE": "Brobo"
+    },
+    {
+     
+     "DEPARTEMENT": "BOUAKE",
+     "COMMUNE": "Botro"
+    },
+    {
+     
+     "DEPARTEMENT": "BOUAKE",
+     "COMMUNE": "Bouaké"
+    },
+    {
+     
+     "DEPARTEMENT": "BOUAKE",
+     "COMMUNE": "Languibonou"
+    },
+    {
+     
+     "DEPARTEMENT": "BEOUMI",
+     "COMMUNE": "Beoumi"
+    },
+    {
+     
+     "DEPARTEMENT": "BEOUMI",
+     "COMMUNE": "Bodokro"
+    },
+    {
+     
+     "DEPARTEMENT": "BEOUMI",
+     "COMMUNE": "Ando-kekrenou"
+    },
+    {
+     
+     "DEPARTEMENT": "BEOUMI",
+     "COMMUNE": "Kondrobo"
+    },
+    {
+     
+     "DEPARTEMENT": "DABAKALA",
+     "COMMUNE": "Bassawa"
+    },
+    {
+     
+     "DEPARTEMENT": "DABAKALA",
+     "COMMUNE": "Bonieredougou"
+    },
+    {
+     
+     "DEPARTEMENT": "DABAKALA",
+     "COMMUNE": "Dabakala"
+    },
+    {
+     
+     "DEPARTEMENT": "DABAKALA",
+     "COMMUNE": "Foumbolo"
+    },
+    {
+     
+     "DEPARTEMENT": "DABAKALA",
+     "COMMUNE": "Satama-Sokoro"
+    },
+    {
+     
+     "DEPARTEMENT": "DABAKALA",
+     "COMMUNE": "Satama-Sokouro"
+    },
+    {
+     
+     "DEPARTEMENT": "KATIOLA",
+     "COMMUNE": "Fronan"
+    },
+    {
+     
+     "DEPARTEMENT": "KATIOLA",
+     "COMMUNE": "Katiola"
+    },
+    {
+     
+     "DEPARTEMENT": "KATIOLA",
+     "COMMUNE": "Niakaramandougou"
+    },
+    {
+     
+     "DEPARTEMENT": "KATIOLA",
+     "COMMUNE": "Tafiré"
+    },
+    {
+     
+     "DEPARTEMENT": "KATIOLA",
+     "COMMUNE": "Tortiya"
+    },
+    {
+     
+     "DEPARTEMENT": "KATIOLA",
+     "COMMUNE": "Timbe"
+    },
+    {
+     
+     "DEPARTEMENT": "SAKASSOU",
+     "COMMUNE": "Sakassou"
+    },
+    {
+     
+     "DEPARTEMENT": "SAKASSOU",
+     "COMMUNE": "Tomoudi-sakassou"
+    },
+    {
+     
+     "DEPARTEMENT": "MAN",
+     "COMMUNE": "Man"
+    },
+    {
+     
+     "DEPARTEMENT": "MAN",
+     "COMMUNE": "Facobly"
+    },
+    {
+     
+     "DEPARTEMENT": "MAN",
+     "COMMUNE": "Kouibly"
+    },
+    {
+     
+     "DEPARTEMENT": "MAN",
+     "COMMUNE": "Logoualé"
+    },
+    {
+     
+     "DEPARTEMENT": "MAN",
+     "COMMUNE": "Sangouiné"
+    },
+    {
+     
+     "DEPARTEMENT": "MAN",
+     "COMMUNE": "Semien"
+    },
+    {
+     
+     "DEPARTEMENT": "MAN",
+     "COMMUNE": "Niadrou"
+    },
+    {
+     
+     "DEPARTEMENT": "MAN",
+     "COMMUNE": "Totrodrou"
+    },
+    {
+     
+     "DEPARTEMENT": "BANGOLO",
+     "COMMUNE": "Bangolo"
+    },
+    {
+     
+     "DEPARTEMENT": "BANGOLO",
+     "COMMUNE": "Dieouzon"
+    },
+    {
+     
+     "DEPARTEMENT": "BANGOLO",
+     "COMMUNE": "Zeo"
+    },
+    {
+     
+     "DEPARTEMENT": "BANGOLO",
+     "COMMUNE": "Zou"
+    },
+    {
+     
+     "DEPARTEMENT": "BIANKOUMA",
+     "COMMUNE": "Biankouma"
+    },
+    {
+     
+     "DEPARTEMENT": "BIANKOUMA",
+     "COMMUNE": "Gbonné"
+    },
+    {
+     
+     "DEPARTEMENT": "BIANKOUMA",
+     "COMMUNE": "Sipilou"
+    },
+    {
+     
+     "DEPARTEMENT": "DANANE",
+     "COMMUNE": "Danané"
+    },
+    {
+     
+     "DEPARTEMENT": "DANANE",
+     "COMMUNE": "Bin-Houyé"
+    },
+    {
+     
+     "DEPARTEMENT": "DANANE",
+     "COMMUNE": "Zouan-Hounien"
+    },
+    {
+     
+     "DEPARTEMENT": "DANANE",
+     "COMMUNE": "Mahapleu"
+    },
+    {
+    
+     "DEPARTEMENT": "DIVO",
+     "COMMUNE": "Divo"
+    },
+    {
+    
+     "DEPARTEMENT": "DIVO",
+     "COMMUNE": "Fresco"
+    },
+    {
+    
+     "DEPARTEMENT": "DIVO",
+     "COMMUNE": "Guitry"
+    },
+    {
+    
+     "DEPARTEMENT": "DIVO",
+     "COMMUNE": "Hiré"
+    },
+    {
+    
+     "DEPARTEMENT": "DIVO",
+     "COMMUNE": "YOCOBOUE"
+    },
+    {
+    
+     "DEPARTEMENT": "LAKOTA",
+     "COMMUNE": "Lakota"
+    },
+    {
+    
+     "DEPARTEMENT": "LAKOTA",
+     "COMMUNE": "NIAMBEZARIA"
+    },
+    {
+    
+     "DEPARTEMENT": "LAKOTA",
+     "COMMUNE": "Zikisso"
+    },
+    {
+     
+     "DEPARTEMENT": "GAGNOA",
+     "COMMUNE": "Bayota"
+    },
+    {
+     
+     "DEPARTEMENT": "GAGNOA",
+     "COMMUNE": "Gagnoa"
+    },
+    {
+     
+     "DEPARTEMENT": "GAGNOA",
+     "COMMUNE": "Gnagbodougnoa"
+    },
+    {
+     
+     "DEPARTEMENT": "GAGNOA",
+     "COMMUNE": "Guibéroua"
+    },
+    {
+     
+     "DEPARTEMENT": "GAGNOA",
+     "COMMUNE": "Ouragahio"
+    },
+    {
+     
+     "DEPARTEMENT": "OUME",
+     "COMMUNE": "Diégonéfla"
+    },
+    {
+     
+     "DEPARTEMENT": "OUME",
+     "COMMUNE": "Oumé"
+    },
+    {
+     
+     "DEPARTEMENT": "YAMOUSSOUKRO",
+     "COMMUNE": "Yamoussoukro"
+    },
+    {
+     
+     "DEPARTEMENT": "YAMOUSSOUKRO",
+     "COMMUNE": "Didiévi"
+    },
+    {
+     
+     "DEPARTEMENT": "YAMOUSSOUKRO",
+     "COMMUNE": "Attiegouakro"
+    },
+    {
+     
+     "DEPARTEMENT": "TIEBISSOU",
+     "COMMUNE": "Tiébissou"
+    },
+    {
+     
+     "DEPARTEMENT": "TIEBISSOU",
+     "COMMUNE": "Tié-N’diekro"
+    },
+    {
+     
+     "DEPARTEMENT": "TOUMODI",
+     "COMMUNE": "Toumodi"
+    },
+    {
+     
+     "DEPARTEMENT": "TOUMODI",
+     "COMMUNE": "Djékanou"
+    },
+    {
+     
+     "DEPARTEMENT": "TOUMODI",
+     "COMMUNE": "Angoda"
+    },
+    {
+     
+     "DEPARTEMENT": "TOUMODI",
+     "COMMUNE": "Kpouebo"
+    },
+    {
+     
+     "DEPARTEMENT": "TOUMODI",
+     "COMMUNE": "Kokoumbo"
+    },
+    {
+     
+     "DEPARTEMENT": "DUEKOUE",
+     "COMMUNE": "Duékoué"
+    },
+    {
+     
+     "DEPARTEMENT": "DUEKOUE",
+     "COMMUNE": "BAGOHOUO"
+    },
+    {
+     
+     "DEPARTEMENT": "DUEKOUE",
+     "COMMUNE": "GBAPLEU"
+    },
+    {
+     
+     "DEPARTEMENT": "DUEKOUE",
+     "COMMUNE": "GUEHIEBLY"
+    },
+    {
+     
+     "DEPARTEMENT": "DUEKOUE",
+     "COMMUNE": "GUEZON"
+    },
+    {
+     
+     "DEPARTEMENT": "GUIGLO",
+     "COMMUNE": "Bloléquin"
+    },
+    {
+     
+     "DEPARTEMENT": "GUIGLO",
+     "COMMUNE": "Guiglo"
+    },
+    {
+     
+     "DEPARTEMENT": "GUIGLO",
+     "COMMUNE": "Taï"
+    },
+    {
+     
+     "DEPARTEMENT": "TOULEPLEU",
+     "COMMUNE": "Toulepleu"
+    },
+    {
+     
+     "DEPARTEMENT": "TOULEPLEU",
+     "COMMUNE": "BAKOUBLY"
+    },
+    {
+     
+     "DEPARTEMENT": "TOULEPLEU",
+     "COMMUNE": "PEHE"
+    },
+    {
+     
+     "DEPARTEMENT": "TOULEPLEU",
+     "COMMUNE": "TIOBLY"
+    },
+    {
+     
+     "DEPARTEMENT": "BONDOUKOU",
+     "COMMUNE": "Bondoukou"
+    },
+    {
+     
+     "DEPARTEMENT": "BONDOUKOU",
+     "COMMUNE": "Goumere"
+    },
+    {
+     
+     "DEPARTEMENT": "BONDOUKOU",
+     "COMMUNE": "Tabagne"
+    },
+    {
+     
+     "DEPARTEMENT": "BONDOUKOU",
+     "COMMUNE": "Taoudi"
+    },
+    {
+     
+     "DEPARTEMENT": "BONDOUKOU",
+     "COMMUNE": "Sorobango"
+    },
+    {
+     
+     "DEPARTEMENT": "BONDOUKOU",
+     "COMMUNE": "Sapli"
+    },
+    {
+     
+     "DEPARTEMENT": "BONDOUKOU",
+     "COMMUNE": "Sandégué"
+    },
+    {
+     
+     "DEPARTEMENT": "BOUNA",
+     "COMMUNE": "Bouna"
+    },
+    {
+     
+     "DEPARTEMENT": "BOUNA",
+     "COMMUNE": "Doropo"
+    },
+    {
+     
+     "DEPARTEMENT": "BOUNA",
+     "COMMUNE": "Nassian"
+    },
+    {
+     
+     "DEPARTEMENT": "BOUNA",
+     "COMMUNE": "Tehini"
+    },
+    {
+     
+     "DEPARTEMENT": "TANDA",
+     "COMMUNE": "Tanda"
+    },
+    {
+     
+     "DEPARTEMENT": "TANDA",
+     "COMMUNE": "Assuefry"
+    },
+    {
+     
+     "DEPARTEMENT": "TANDA",
+     "COMMUNE": "Kouassi-datekro"
+    },
+    {
+     
+     "DEPARTEMENT": "TANDA",
+     "COMMUNE": "Transua"
+    },
+    {
+     
+     "DEPARTEMENT": "TANDA",
+     "COMMUNE": "Tankesse"
+    },
+    {
+     
+     "DEPARTEMENT": " TOUBA",
+     "COMMUNE": "Booko"
+    },
+    {
+     
+     "DEPARTEMENT": " TOUBA",
+     "COMMUNE": "Borotou"
+    },
+    {
+     
+     "DEPARTEMENT": " TOUBA",
+     "COMMUNE": "Guintéguéla"
+    },
+    {
+     
+     "DEPARTEMENT": " TOUBA",
+     "COMMUNE": "Koonan"
+    },
+    {
+     
+     "DEPARTEMENT": " TOUBA",
+     "COMMUNE": "Koro"
+    },
+    {
+     
+     "DEPARTEMENT": " TOUBA",
+     "COMMUNE": "Ouaninou"
+    },
+    {
+     
+     "DEPARTEMENT": " TOUBA",
+     "COMMUNE": "Touba"
+    },
+    {
+     
+     "DEPARTEMENT": " TOUBA",
+     "COMMUNE": "FOUNGBESSO"
+    },
+    {
+     
+     "DEPARTEMENT": "SAN-PEDRO",
+     "COMMUNE": "Grand-Béréby"
+    },
+    {
+     
+     "DEPARTEMENT": "SAN-PEDRO",
+     "COMMUNE": "San-Pédro"
+    },
+    {
+     
+     "DEPARTEMENT": "SASSANDRA",
+     "COMMUNE": "GUEYO"
+    },
+    {
+     
+     "DEPARTEMENT": "SASSANDRA",
+     "COMMUNE": "Sassandra"
+    },
+    {
+     
+     "DEPARTEMENT": "SASSANDRA",
+     "COMMUNE": "SAGO"
+    },
+    {
+     
+     "DEPARTEMENT": "SOUBRE",
+     "COMMUNE": "Buyo"
+    },
+    {
+     
+     "DEPARTEMENT": "SOUBRE",
+     "COMMUNE": "Grand-Zattry"
+    },
+    {
+     
+     "DEPARTEMENT": "SOUBRE",
+     "COMMUNE": "Méagui"
+    },
+    {
+     
+     "DEPARTEMENT": "SOUBRE",
+     "COMMUNE": "OKROUYO"
+    },
+    {
+     
+     "DEPARTEMENT": "SOUBRE",
+     "COMMUNE": "Soubré"
+    },
+    {
+     
+     "DEPARTEMENT": "TABOU",
+     "COMMUNE": "Grabo"
+    },
+    {
+     
+     "DEPARTEMENT": "TABOU",
+     "COMMUNE": "Tabou"
+    },
+    {
+     
+     "DEPARTEMENT": "DIMBOKRO",
+     "COMMUNE": "Dimbokro"
+    },
+    {
+     
+     "DEPARTEMENT": "BONGOUANOU",
+     "COMMUNE": "Anoumaba"
+    },
+    {
+     
+     "DEPARTEMENT": "BONGOUANOU",
+     "COMMUNE": "Arrah"
+    },
+    {
+     
+     "DEPARTEMENT": "BONGOUANOU",
+     "COMMUNE": "Bongouanou"
+    },
+    {
+     
+     "DEPARTEMENT": "BONGOUANOU",
+     "COMMUNE": "M'batto"
+    },
+    {
+     
+     "DEPARTEMENT": "BONGOUANOU",
+     "COMMUNE": "Tiemelékro"
+    },
+    {
+     
+     "DEPARTEMENT": "BOCANDA",
+     "COMMUNE": "Bocanda"
+    },
+    {
+     
+     "DEPARTEMENT": "DAOUKRO",
+     "COMMUNE": "Daoukro"
+    },
+    {
+     
+     "DEPARTEMENT": "DAOUKRO",
+     "COMMUNE": "Ettrokro"
+    },
+    {
+     
+     "DEPARTEMENT": "DAOUKRO",
+     "COMMUNE": "Kouassi-Kouassikro"
+    },
+    {
+     
+     "DEPARTEMENT": "DAOUKRO",
+     "COMMUNE": "Ouellé"
+    },
+    {
+     
+     "DEPARTEMENT": "M'BAHIAKRO",
+     "COMMUNE": "M'bahiakro"
+    },
+    {
+     
+     "DEPARTEMENT": "M'BAHIAKRO",
+     "COMMUNE": "Banguera"
+    },
+    {
+     
+     "DEPARTEMENT": "M'BAHIAKRO",
+     "COMMUNE": "Koffi-amonkro"
+    },
+    {
+     
+     "DEPARTEMENT": "M'BAHIAKRO",
+     "COMMUNE": "Prikro"
+    },
+    {
+     
+     "DEPARTEMENT": "BOUAFLE",
+     "COMMUNE": "Bonon"
+    },
+    {
+     
+     "DEPARTEMENT": "BOUAFLE",
+     "COMMUNE": "Bouaflé"
+    },
+    {
+     
+     "DEPARTEMENT": "SINFRA",
+     "COMMUNE": "Sinfra"
+    },
+    {
+     
+     "DEPARTEMENT": "SINFRA",
+     "COMMUNE": "Kouetinfla"
+    },
+    {
+     
+     "DEPARTEMENT": "SINFRA",
+     "COMMUNE": "Bazre"
+    },
+    {
+     
+     "DEPARTEMENT": "SINFRA",
+     "COMMUNE": "Konefla"
+    },
+    {
+     
+     "DEPARTEMENT": "ZUENOULA",
+     "COMMUNE": "Gohitafla"
+    },
+    {
+     
+     "DEPARTEMENT": "ZUENOULA",
+     "COMMUNE": "Zuénoula"
+    },
+    {
+     
+     "DEPARTEMENT": "MANKONO",
+     "COMMUNE": "Dianra"
+    },
+    {
+     
+     "DEPARTEMENT": "MANKONO",
+     "COMMUNE": "Kongasso"
+    },
+    {
+     
+     "DEPARTEMENT": "MANKONO",
+     "COMMUNE": "Kounahiri"
+    },
+    {
+     
+     "DEPARTEMENT": "MANKONO",
+     "COMMUNE": "Mankono"
+    },
+    {
+     
+     "DEPARTEMENT": "MANKONO",
+     "COMMUNE": "Marandallah"
+    },
+    {
+     
+     "DEPARTEMENT": "MANKONO",
+     "COMMUNE": "Sarhala"
+    },
+    {
+     
+     "DEPARTEMENT": "MANKONO",
+     "COMMUNE": "Tieningboue"
+    },
+    {
+     
+     "DEPARTEMENT": "SEGUELA",
+     "COMMUNE": "Djibrosso"
+    },
+    {
+     
+     "DEPARTEMENT": "SEGUELA",
+     "COMMUNE": "Dualla"
+    },
+    {
+     
+     "DEPARTEMENT": "SEGUELA",
+     "COMMUNE": "Kani"
+    },
+    {
+     
+     "DEPARTEMENT": "SEGUELA",
+     "COMMUNE": "Massala"
+    },
+    {
+     
+     "DEPARTEMENT": "SEGUELA",
+     "COMMUNE": "Morondo"
+    },
+    {
+     
+     "DEPARTEMENT": "SEGUELA",
+     "COMMUNE": "Seguela"
+    },
+    {
+     
+     "DEPARTEMENT": "SEGUELA",
+     "COMMUNE": "Sifié"
+    },
+    {
+     
+     "DEPARTEMENT": "SEGUELA",
+     "COMMUNE": "Worofla"
+    },
+    {
+     
+     "DEPARTEMENT": "ODIENNE",
+     "COMMUNE": "Bako"
+    },
+    {
+     
+     "DEPARTEMENT": "ODIENNE",
+     "COMMUNE": "Dioulatiédougou"
+    },
+    {
+     
+     "DEPARTEMENT": "ODIENNE",
+     "COMMUNE": "Gbeleban"
+    },
+    {
+     
+     "DEPARTEMENT": "ODIENNE",
+     "COMMUNE": "Goulia"
+    },
+    {
+     
+     "DEPARTEMENT": "ODIENNE",
+     "COMMUNE": "Kaniasso"
+    },
+    {
+     
+     "DEPARTEMENT": "ODIENNE",
+     "COMMUNE": "Madinani"
+    },
+    {
+     
+     "DEPARTEMENT": "ODIENNE",
+     "COMMUNE": "Minignan"
+    },
+    {
+     
+     "DEPARTEMENT": "ODIENNE",
+     "COMMUNE": "Odienné"
+    },
+    {
+     
+     "DEPARTEMENT": "ODIENNE",
+     "COMMUNE": "Samatiguila"
+    },
+    {
+     
+     "DEPARTEMENT": "ODIENNE",
+     "COMMUNE": "Séguélon"
+    },
+    {
+     
+     "DEPARTEMENT": "ODIENNE",
+     "COMMUNE": "Seydougou"
+    },
+    {
+     
+     "DEPARTEMENT": "ODIENNE",
+     "COMMUNE": "Tiémé"
+    },
+    {
+     
+     "DEPARTEMENT": "ODIENNE",
+     "COMMUNE": "Tienko"
+    }
+   ]

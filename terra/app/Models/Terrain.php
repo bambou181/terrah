@@ -7,8 +7,20 @@ use Illuminate\Database\Eloquent\Model;
 
 class Terrain extends Model
 {
+    
 
     //use HasFactory;
+    //for home 
+    public static function right($request)
+    {
+        $request->validate([
+            "localite" => "required|max:255",
+            "surface" => "required|numeric|gt:0",
+            "budget" => "required|numeric|gt:0",
+            // Validation for each image in the array
+            ]);
+    }
+    //for admin
     public static function validate($request)
     {
         $request->validate([
@@ -21,6 +33,11 @@ class Terrain extends Model
             'imgs.*' => 'image',// Validation for each image in the array
             ]);
     }
+    /*public function locations()
+    {
+        return $this->belongsTo(Location::class);
+    }
+    */
 
     public function getId()
     {
@@ -130,6 +147,12 @@ class Terrain extends Model
     public function getImgsAttribute($value)
     {
         return json_decode($value, true);
+    }
+
+    public function users()
+    {
+        return $this->belongsToMany(User::class, 'visites', 'terrain_id', 'user_id')
+                    ->withPivot('visitDate');
     }
 
 

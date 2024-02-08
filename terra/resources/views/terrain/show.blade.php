@@ -16,7 +16,7 @@
 
 <div class="single-property section">
     <div class="container">
-        <nav class="navbar sticky-top navbar-light bg-danger mt-5">
+        <nav class="navbar sticky-top navbar-light mt-5" style="background-color:#F35525">
             <div class="container">
                 <a class="navbar-brand" href="#">{{ $viewData["terrain"]->getPrice() }} FCFA</a>
             </div>
@@ -68,51 +68,7 @@
                             <h4>{{ $viewData["terrain"]->getSize() }}<br><span>Taille</span></h4>
                         </li>
                         <li>
-                            <form action="">
-                                <div class="input-group mb-3">
-                                    <span class="input-group-text" id="basic-addon1"><i
-                                            class="bi bi-person-fill"></i></span>
-                                    <input type="text" class="form-control" placeholder="Username" aria-label="Username"
-                                        aria-describedby="basic-addon1">
-                                </div>
-                                <div class="input-group mb-3">
-                                    <span class="input-group-text" id="basic-addon1"><i
-                                            class="bi bi-envelope-fill"></i></span>
-                                    <input type="text" class="form-control" placeholder="Username" aria-label="Username"
-                                        aria-describedby="basic-addon1">
-                                </div>
-                                <div class="input-group mb-3">
-                                    <span class="input-group-text" id="basic-addon1"><i
-                                            class="bi bi-telephone-fill"></i></span>
-                                    <input type="text" class="form-control" placeholder="Username" aria-label="Username"
-                                        aria-describedby="basic-addon1">
-                                </div>
-                                <div class="input-group input-group-sm mb-3">
-                                    <span class="input-group-text " id="basic-addon1"><i
-                                            class="bi bi-calendar rond"></i></span>
-                                    <input type="date" class="form-control" placeholder="Username" aria-label="Username"
-                                        aria-describedby="basic-addon1" name="visitDate">
-                                </div>
-                                <div class="mb-3">
-                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"
-                                        checked>
-                                    <label class="form-check-label" for="flexCheckDefault">
-                                        J'aimerais être contacté(e) par des agences immobilières partenaires pour des
-                                        biens similaires
-                                    </label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
-                                    <label class="form-check-label" for="flexCheckChecked">
-                                        Je ne souhaite pas recevoir les annonces similaires et les suggestions
-                                        personnalisées
-                                    </label>
-                                </div><br>
-                                <button type="button" class="btn btn-danger w-100">Envoyer</button>
-                            </form>
+                            @include('auth.register')
                         </li>
 
                     </ul>
