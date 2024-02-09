@@ -23,6 +23,9 @@ Route::post('/search', 'App\Http\Controllers\HomeController@search')->name("home
 Route::get('/terrains', 'App\Http\Controllers\TerrainController@index')->name("terrain.index");
 Route::get('/terrains/{id}', 'App\Http\Controllers\TerrainController@show')->name("terrain.show");
 
+Route::get('/departements', 'App\Http\Controllers\LocaliteController@index')->name("localite.index");
+Route::get('/departement/{departement}', 'App\Http\Controllers\LocaliteController@afficherDepartement')->name('localite.show');
+
 
 
 

@@ -206,7 +206,7 @@
                 }
 
             });
-</script>
+    </script>
     
     <script src="{{ asset('/js/isotope.min.js') }}"></script>
     <script src="{{ asset('/js/owl-carousel.js') }}"></script>

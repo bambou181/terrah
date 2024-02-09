@@ -378,11 +378,19 @@
             <div class="col-lg-4">
                 <h6>LOCALITÉS</h6>
                 <img src="{{ asset('/img/space5.jpg') }}" style="border-radius:10px; height:200px; max-width:100%;" alt="">
+                <p class="mt-5"><a href="{{route('localite.index')}}">Immobilier par Départements</a></p>
+                <p>Immobilier par Communes</p>
             </div>
             <div class="col-lg-4"></div>
             <div class="col-lg-4">
                 <h6>TYPE DE BIENS</h6>
                 <img src="{{ asset('/img/video-bg.jpg') }}" style="border-radius:10px; height:200px; max-width:100%;" alt="">
+                <p class="mt-5">Terrains à vendre</p>
+                <p>Appartements à vendre</p>
+                <p>Maisons à vendre</p>
+                <p>Studios à vendre</p>
+                <p>Villas à vendre</p>
+                <p>Immeubles à vendre</p>
             </div>
             <div class="col-lg-6">
 
