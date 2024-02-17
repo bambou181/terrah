@@ -14,12 +14,38 @@ class LocaliteController extends Controller{
         
     }
 
+    public function comm()
+    {
+        $communes = Location::distinct()->pluck('commune');
+        return view('localite.comm', compact('communes'));
+        
+    }
+
+    
+
     public function afficherDepartement($departement)
     {
        
-        $terrainsByDept = Terrain::where('location', $departement);
+        $terrainsByDept = Terrain::join('locations', 'terrains.location', '=', 'locations.commune')
+                    ->where('locations.departement', $departement)
+                    ->select('terrains.*') 
+                    ->get();
+
+       
 
         // Passer les détails du département à la vue
         return view('localite.show',compact('terrainsByDept'));
+    }
+
+
+    public function afficherCommune($commune)
+    {
+       
+        $terrainsByCom = Terrain::where('location',$commune)->get();
+
+       
+
+        // Passer les détails du département à la vue
+        return view('localite.viewcom',compact('terrainsByCom'));
     }
 }

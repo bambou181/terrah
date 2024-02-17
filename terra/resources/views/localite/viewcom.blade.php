@@ -43,20 +43,20 @@
         </div>
     </form>
 </div><br>
-@if(count($terrainsByDept) > 0)
-@foreach($terrainsByDept as $bydept)
+@if(count($terrainsByCom) > 0)
+@foreach($terrainsByCom as $bycom)
 <div class="container mb-3">
     <div class="card mb-3" style="max-width: 650px;">
         <div class="row g-0">
             <div class="col-md-7">
-                <img src="{{ asset('/storage/'.$bydept->getImage()) }}" class="img-fluid rounded-start" alt="...">
+                <img src="{{ asset('/storage/'.$bycom->getImage()) }}" class="img-fluid rounded-start" alt="...">
             </div>
             <div class="col-md-5">
                 <div class="card-body">
-                    <h5 class="card-title">{{ $bydept->getPrice() }}</h5>
+                    <h5 class="card-title">{{ $bycom->getPrice() }}</h5>
                     <p class="card-text">This is a wider card with supporting text below.</p>
-                    <h5 class="card-title">{{ $bydept->getSize() }}</h5>
-                    <h5 class="card-title">{{ $bydept->getLocation() }}</h5>
+                    <h5 class="card-title">{{ $bycom->getSize() }}</h5>
+                    <h5 class="card-title">{{ $bycom->getLocation() }}</h5>
                     <div class="row">
                         <div class="col-10">
                             <a href="#" class="btn btn-danger">Voir +</a>
@@ -99,15 +99,14 @@
 
                 </div>
             </div>
-            <p class="m-3">{{  $bydept->getDescription() }}</p>
+            <p class="m-3">{{  $bycom->getDescription() }}</p>
         </div>
     </div>
 </div>
 @endforeach
 @else
 <div class="container mb-3">
-<p>Aucune propriété trouvée</p>
+    <p>Aucune propriété trouvée</p>
 </div>
-  
 @endif
 @endsection

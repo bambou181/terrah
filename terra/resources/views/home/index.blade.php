@@ -379,7 +379,7 @@
                 <h6>LOCALITÉS</h6>
                 <img src="{{ asset('/img/space5.jpg') }}" style="border-radius:10px; height:200px; max-width:100%;" alt="">
                 <p class="mt-5"><a href="{{route('localite.index')}}">Immobilier par Départements</a></p>
-                <p>Immobilier par Communes</p>
+                <p><a href="{{route('localite.comm')}}">Immobilier par Communes</a></p>
             </div>
             <div class="col-lg-4"></div>
             <div class="col-lg-4">

@@ -81,17 +81,19 @@ class HomeController extends Controller
         $departements = Location::select("departement")
                         ->where('departement', 'LIKE', '%'. $query . '%')
                         ->distinct() 
-                        ->pluck('departement');
+                        ->pluck('departement')
+                        ->toArray();
 
         $communes = Location::select("commune")
-                        ->where('commune', 'LIKE', '%'. $query . '%')
-                        ->distinct() 
-                        ->pluck('commune');
+                            ->where('commune', 'LIKE', '%'. $query . '%')
+                            ->distinct() 
+                            ->pluck('commune')
+                            ->toArray();
 
-        $data = $departements->union($communes);
-     
+        $data = array_merge($departements, $communes);
 
         return response()->json($data);
+
 
     }
 }

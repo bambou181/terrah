@@ -31,10 +31,22 @@
         </span>
         @enderror
     </div>
+    @if(isset($bydept))
+    <input type="hidden" name="terrain_id" value="{{ $bydept->getId() }}">
+
+    @else
     <input type="hidden" name="terrain_id" value="{{ $viewData["terrain"]->getId() }}">
+
+    @endif
+    <label class="form-check-label" for="flexCheckDefault">
+            Date de visite
+        </label>
     <div class="input-group input-group-sm mb-3">
         <span class="input-group-text " id="basic-addon1"><i class="bi bi-calendar rond"></i></span>
         <input type="date" class="form-control @error('visitDate') is-invalid @enderror" name="visitDate">
+    </div>
+    <div class="mb-3">
+        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Bonjour, je suis vivement intéressé par ce bien, merci de me recontacter pour plus d'informations. Bien cordialement"></textarea>
     </div>
     <!--<div class="mb-3">
         <textarea class="form-control" id="exampleFormControlTextarea1"

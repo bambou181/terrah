@@ -26,6 +26,8 @@ Route::get('/terrains/{id}', 'App\Http\Controllers\TerrainController@show')->nam
 Route::get('/departements', 'App\Http\Controllers\LocaliteController@index')->name("localite.index");
 Route::get('/departement/{departement}', 'App\Http\Controllers\LocaliteController@afficherDepartement')->name('localite.show');
 
+Route::get('/communes', 'App\Http\Controllers\LocaliteController@comm')->name("localite.comm");
+Route::get('/commune/{commune}', 'App\Http\Controllers\LocaliteController@afficherCommune')->name('localite.viewcom');
 
 
 
