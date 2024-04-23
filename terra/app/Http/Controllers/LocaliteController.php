@@ -29,7 +29,7 @@ class LocaliteController extends Controller{
         $terrainsByDept = Terrain::join('locations', 'terrains.location', '=', 'locations.commune')
                     ->where('locations.departement', $departement)
                     ->select('terrains.*') 
-                    ->get();
+                    ->paginate(9);
 
        
 
@@ -42,7 +42,7 @@ class LocaliteController extends Controller{
     {
        
         $terrainsByCom = Terrain::where('location',$commune)->get();
-
+ 
        
 
         // Passer les détails du département à la vue

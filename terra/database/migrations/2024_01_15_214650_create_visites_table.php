@@ -20,6 +20,8 @@ return new class extends Migration
             $table->foreign('user_id')->references('id')->on('users');
             $table->unsignedBigInteger('terrain_id');
             $table->foreign('terrain_id')->references('id')->on('terrains');
+
+            $table->unique(['user_id', 'terrain_id']);
             $table->timestamps();
         });
     }

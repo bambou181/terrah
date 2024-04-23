@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Terrain extends Model
 {
     
+    protected $fillable = ['image', 'imgs','name'];
 
     //use HasFactory;
     //for home 

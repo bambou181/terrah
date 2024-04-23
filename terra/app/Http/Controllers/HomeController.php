@@ -44,10 +44,13 @@ class HomeController extends Controller
         if ($budget) {
             $query->where('price', '<=', $budget);
         }
+        
+        $searchedTerrains = $query->paginate(9);
+        $allTerrains = Terrain::whereNotIn('id', $searchedTerrains->pluck('id')->toArray())->paginate(6);
 
     // Exécuter la requête de recherche
-    $searchedTerrains = $query->get();
-    $allTerrains = Terrain::whereNotIn('id', $searchedTerrains->pluck('id')->toArray())->get();
+    //$searchedTerrains = $query->get();
+    //$allTerrains = Terrain::whereNotIn('id', $searchedTerrains->pluck('id')->toArray())->get();
         //Terrain::right($request);
         // Valider les données du formulaire si nécessaire
 

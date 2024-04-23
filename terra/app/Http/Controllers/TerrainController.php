@@ -2,14 +2,16 @@
 namespace App\Http\Controllers;
 use App\Models\Terrain;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Session;
+
 
 class TerrainController extends Controller
 {
     public function index()
     {
-       
-        $allTerrains = Terrain::all();
-        return view('terrain.index', compact('allTerrains'));
+        $sms = Session::has('message') ? Session::get('message') : null;
+        $allTerrains = Terrain::paginate(9);
+        return view('terrain.index', compact('allTerrains','sms'));
     }
     public function show($id)
     {

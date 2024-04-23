@@ -70,19 +70,20 @@
                         <!-- ***** Menu Start ***** -->
                         
                         <ul class="nav">
-                            <li class="nav-item"><a href="{{route('home.index') }}" class="nav-link active" >Accueil</a></li>
-                            <li class="nav-item"><a href="{{ route('terrain.index') }}" class="nav-link">Terrains</a></li>
-                            <li class="nav-item"><a class="nav-link" href="{{ route('cart.index') }}">A propos</a></li>
-                            <li class="nav-item"><a href="{{ route('contact.index') }}" class="nav-link">Nous Contacter </a></li>
-                           <!--  @guest
-                            <li><a class="nav-link active" href="{{ route('login') }}">Login</a></li>
-                            <li><a class="nav-link active" href="{{ route('register') }}">Register</a></li>
+                            <li><a href="{{route('home.index') }}" class="active" >Accueil</a></li>
+                            <li><a href="{{ route('terrain.index') }}">Propriétés</a></li>
+                            <li><a href="{{ route('about.index') }}">A propos</a></li>
+                            <li><a href="{{ route('contact.index') }}">Nous Contacter </a></li>
+                            <!--
+                            @guest
                             @else
-                            <form id="logout" action="{{ route('logout') }}" method="POST">
-                            <li><a role="button" class="nav-link active"
-                            onclick="document.getElementById('logout').submit();">Logout</a></li>
-                            @csrf
-                            </form>
+                            
+                                <form id="logout" action="{{ route('logout') }}" method="POST">
+                                <a role="button" class="nav-link link-dark"
+                                onclick="document.getElementById('logout').submit();">Déconnexion</a>
+                                @csrf
+                                </form>
+                            
                             @endguest
                             -->
 
@@ -102,88 +103,13 @@
         @yield('content')
     <br>
 
-    <!-- Footer Section Begin -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer__top">
-                <div class="row">
-                    <div class="col-lg-6 col-md-6">
-                        <div class="footer__top__logo">
-                            <a href="#"><img src="{{ asset('img/logo.png') }}" alt=""></a>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-md-6">
-                        <div class="footer__top__social">
-                            <a href="#"><i class="bi bi-facebook"></i></a>
-                            <a href="#"><i class="bi bi-twitter"></i></a>
-                            <a href="#"><i class="bi bi-dribbble"></i></a>
-                            <a href="#"><i class="bi bi-instagram"></i></a>
-                            <a href="#"><i class="bi bi-youtube"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="footer__option">
-                <div class="row">
-                    <div class="col-lg-4 col-md-6 col-sm-6">
-                        <div class="footer__option__item">
-                            <h5>About us</h5>
-                            <p>Formed in 2006 by Matt Hobbs and Cael Jones, Videoprah is an award-winning, full-service
-                                production company specializing.</p>
-                            <a href="#" class="read__more">Read more <span class="arrow_right"></span></a>
-                        </div>
-                    </div>
-                    <div class="col-lg-2 col-md-3 col-sm-3">
-                        <div class="footer__option__item">
-                            <h5>Who we are</h5>
-                            <ul>
-                                <li><a href="#">Team</a></li>
-                                <li><a href="#">Carrers</a></li>
-                                <li><a href="#">Contact us</a></li>
-                                <li><a href="#">Locations</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-lg-2 col-md-3 col-sm-3">
-                        <div class="footer__option__item">
-                            <h5>Our work</h5>
-                            <ul>
-                                <li><a href="#">Feature</a></li>
-                                <li><a href="#">Latest</a></li>
-                                <li><a href="#">Browse Archive</a></li>
-                                <li><a href="#">Video for web</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-12">
-                        <div class="footer__option__item">
-                            <h5>Newsletter</h5>
-                            <p>Videoprah is an award-winning, full-service production company specializing.</p>
-                            <form action="#">
-                                <input type="text" placeholder="Email">
-                                <button type="submit"><i class="bi bi-send"></i></button>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="footer__copyright">
-                <div class="row">
-                    <div class="col-lg-12 text-center">
-                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                        <p class="footer__copyright__text">Copyright &copy;
-                            <script>
-                            document.write(new Date().getFullYear());
-                            </script>
-                            All rights reserved | <i class="bi bi-heart-o" aria-hidden="true"></i>
-                        </p>
-                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
-    <!-- Footer Section End -->
+    <footer>
+    <div class="container">
+      <div class="col-lg-8 mx-auto">
+        <p> Ensemble nous accomplirons de grandes choses</p>
+      </div>
+    </div>
+  </footer>
     <script src="{{ asset('/js/jquery.min.js') }}"></script>
     <script src="{{ asset('/js/bootstrap.bundle.min.js') }}"></script>
     <script src="{{ asset('/js/bootstrap3-typeahead.min.js') }}"></script>

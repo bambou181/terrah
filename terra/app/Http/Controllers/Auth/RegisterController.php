@@ -6,6 +6,14 @@ use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
 use App\Models\User;
 use App\Models\Visite;
+use App\Models\Terrain;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\SignUp;
+use Illuminate\Support\Facades\Session;
+
+
+use App\Mail\MarkdownMail;
+use App\Mail\AdminMail;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
@@ -30,7 +38,7 @@ class RegisterController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = RouteServiceProvider::HOME;
+    protected $redirectTo = '/terrains';
 
     /**
      * Create a new controller instance.
@@ -52,7 +60,7 @@ class RegisterController extends Controller
     {
         return Validator::make($data, [
             'name' => ['required', 'string', 'max:255'],
-            'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
+            'email' => ['required', 'string', 'email', 'max:255'],
             'phone' => ['required', 'string', 'min:8', 'max:14'],
         ]);
         
@@ -66,17 +74,26 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-
-        
-        $user = User::create([
-            'name' => $data['name'],
-            'email' => $data['email'],
-            'phone' => $data['phone'],                        
-        ]);
-        $userId = $user->id;
-        $terrainId = $data['terrain_id'];
+        $user = User::where('email', $data['email'])->first();
+        dd($user);
+        if ($user) {
+            $userId = $user->id;
+        } else {
+            $new = Auth::user();
+            dd($new);
+            /* $user = User::create([
+                'name' => $name,
+                'email' => $mail,
+                'phone' => $data['phone'],                        
+            ]);
+            $userId = $user->id; */
+        }
+        $jsonResult = $data['terrain_id'];
+        $terrainAtt = json_decode($jsonResult, true);
+        $terrainId = $terrainAtt['id'];
         $visitDate = $data['visitDate'];
 
+    
 
         $visite = new Visite();
         $visite->setUserId($userId);
@@ -84,7 +101,13 @@ class RegisterController extends Controller
         $visite->setVisitDate($visitDate);
         $visite->save();
 
+        Mail::to($mail)->send(new MarkdownMail($data));
+        Mail::to('kouakoubadou@gmail')->send(new AdminMail($data));
+        Session::flash('message', 'Nous avons bien reçu votre demande et nous la traiterons rapidement. Nous vous contacterons bientôt pour discuter des prochaines étapes. En attendant, explorez notre site pour d\'autres terrains ou contactez-nous pour des demandes spécifiques.');
+
         return $user;
             
     }
+    
+
 }

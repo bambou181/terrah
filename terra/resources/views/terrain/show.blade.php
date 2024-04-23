@@ -6,8 +6,8 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
-                <span class="breadcrumb"><a href="#">Home</a> / Single Property</span>
-                <h3>Single Property</h3>
+                <span class="breadcrumb"><a href="#">Propriétés</a> / Détails</span>
+                <h3>Détails</h3>
             </div>
         </div>
     </div>
@@ -16,9 +16,9 @@
 
 <div class="single-property section">
     <div class="container">
-        <nav class="navbar sticky-top navbar-light mt-5" style="background-color:#F35525">
+        <nav class="navbar sticky-top navbar-light mt-5" style="background-color:#5CA85C">
             <div class="container">
-                <a class="navbar-brand" href="#">{{ $viewData["terrain"]->getPrice() }} FCFA</a>
+                <p class="navbar-brand text-white">{{ $viewData["terrain"]->getPrice() }} FCFA</p>
             </div>
         </nav><br>
         <div class="row">
@@ -30,11 +30,13 @@
                             <img src="{{ asset('/storage/'.$viewData["terrain"]->getImage()) }}" class="d-block "
                                 alt="...">
                         </div>
+                        @if(isset($viewData["terrain"]->imgs))
                         @foreach($viewData["terrain"]->imgs as $img)
                         <div class="carousel-item main-image">
                             <img src="{{ asset('/storage/'.$img) }}" class="d-block" alt="...">
                         </div>
                         @endforeach
+                        @endif
 
                     </div>
                     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
@@ -61,7 +63,7 @@
             <div class="col-lg-5">
 
                 <div class="info-table ">
-                    <button type="button" class="btn btn-info btn-lg w-100">Contacter notre équipe</button><br><br>
+                    <button type="button" class="btn btn-lg w-100 text-white" style="background-color:#5CA85C">Contacter notre équipe</button><br><br>
                     <ul>
                         <li>
                             <img src="{{ asset('img/info-icon-01.png') }}" alt="" style="max-width: 52px;">

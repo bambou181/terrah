@@ -23,6 +23,9 @@ Route::post('/search', 'App\Http\Controllers\HomeController@search')->name("home
 Route::get('/terrains', 'App\Http\Controllers\TerrainController@index')->name("terrain.index");
 Route::get('/terrains/{id}', 'App\Http\Controllers\TerrainController@show')->name("terrain.show");
 
+Route::post('/signup', 'App\Http\Controllers\SignupController@create')->name("sign.up");
+Route::post('/contactus', 'App\Http\Controllers\ContactController@create')->name("contact.us");
+
 Route::get('/departements', 'App\Http\Controllers\LocaliteController@index')->name("localite.index");
 Route::get('/departement/{departement}', 'App\Http\Controllers\LocaliteController@afficherDepartement')->name('localite.show');
 
@@ -31,9 +34,7 @@ Route::get('/commune/{commune}', 'App\Http\Controllers\LocaliteController@affich
 
 
 
-Route::get('/cart', 'App\Http\Controllers\CartController@index')->name("cart.index");
-Route::get('/cart/delete', 'App\Http\Controllers\CartController@delete')->name("cart.delete");
-Route::post('/cart/add/{id}', 'App\Http\Controllers\CartController@add')->name("cart.add");
+Route::get('/about', 'App\Http\Controllers\AboutController@index')->name("about.index");
 Route::get('/contact', 'App\Http\Controllers\ContactController@index')->name("contact.index");
 
 
